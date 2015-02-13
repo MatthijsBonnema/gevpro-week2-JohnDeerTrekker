@@ -15,9 +15,20 @@ class Country():
         self.country = country
 
     def __str__(self):
-        message = "Hello from {0}".format(self.country)
+        countries = self.importlist()
+        message = "Hello from {0}".format(countries)
         return message
 
+    def importlist(self):
+        countrylist = []
+        file = open("countries_list.txt")
+        for line in file:
+            separator = "\n"
+            line = line.split(separator)
+            for countries in line:
+                countrylist.append(countries)
+        file.close()
+        return countrylist
 
 if __name__ == "__main__":
     country1 = Country()
