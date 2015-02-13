@@ -33,12 +33,3 @@ class Country():
 if __name__ == "__main__":
     country = Country()
     print(country)
-
-    def flags():
-        flag = 1
-        for i in range(3):
-            color_red = randrange(0, 255)
-            color_green = randrange(0, 255)
-            color_blue = randrange(0, 255)
-            
-            flag =+ 1
