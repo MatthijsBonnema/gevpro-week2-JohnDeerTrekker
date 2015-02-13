@@ -4,18 +4,20 @@
 
 import sys
 from random import randrange
+from PyQt4 import QtGui
 
-class FlagColor(QtGui.Qcolor):
+class FlagColor(QtGui.QColor):
 
     def _init__(self):
         super(FlagColor, self).__init__()
 
     def random_color(self):
-        self.setRed(randrange(0, 255))
-        self.setGreen(randrange(0,255))
-        self.setBlue(randrange(0, 255))
-
-def main():
+        red = self.setRed(randrange(0, 255))
+        green = self.setGreen(randrange(0, 255))
+        blue = self.setBlue(randrange(0, 255))
+        return red, green, blue
 
 if __name__ == "__main__":
-    main()
+    flag = FlagColor()
+    red, green, blue = flag.random_color()
+    print(red, green, blue)
