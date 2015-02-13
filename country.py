@@ -16,7 +16,8 @@ class Country():
 
     def __str__(self):
         countries = self.importlist()
-        message = "Hello from {0}".format(countries)
+        for i in countries:
+            message = "Hello from {0}".format(i)
         return message
 
     def importlist(self):
