@@ -32,4 +32,3 @@ class Country():
 
 if __name__ == "__main__":
     country = Country()
-    print(country)

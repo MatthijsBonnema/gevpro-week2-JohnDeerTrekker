@@ -20,4 +20,3 @@ class FlagColor(QtGui.QColor):
 if __name__ == "__main__":
     flag = FlagColor()
     red, green, blue = flag.random_color()
-    print(red, green, blue)
