@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # File: country2.py
 # Author: Matthijs Bonnema and Jeroen Wilkens
-# Date: 20-02-2015
+# Date: 20/02/2015
 # Info: 
 
 import sys
