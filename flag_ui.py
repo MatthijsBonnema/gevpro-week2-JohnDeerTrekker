@@ -12,12 +12,17 @@ import flag_color, country
 class Country(QtGui.QWidget):
     def __init__(self):
         super(Country, self).__init__()
+
         grid = QtGui.QGridLayout()
+
         self.combobox = QtGui.QComboBox(self)
-#        self.combobox.addItems(country.Country.importlist(self))
-#        self.flag1 = QtGui.QFrame(self)
+        self.combobox.addItems(country.Country.importlist(self))
+
+        self.flag1 = QtGui.QFrame(self)
+
         grid.addWidget(self.flag1, 2, 0)
         grid.addWidget(self.combobox, 1, 0)
+
         self.setLayout(grid)
 
 def main():

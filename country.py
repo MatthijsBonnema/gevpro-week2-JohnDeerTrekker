@@ -6,10 +6,12 @@
 
 import sys
 from random import randrange
+import flag_color
 
 class Country():
     def __init__(self):
         self.country = "None"
+        self.flag = flag_color.FlagColor()
 
     def setcountry(self, country):
         self.country = country
