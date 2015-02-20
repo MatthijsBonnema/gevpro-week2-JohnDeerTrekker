@@ -13,6 +13,6 @@ class FlagColor(QtGui.QColor):
         self.random_color()
 
     def random_color(self):
-        self.setRed(random.randrange(256))
-        self.setGreen(random.randrange(256))
-        self.setBlue(random.randrange(256))
+        self.setRed(randrange(256))
+        self.setGreen(randrange(256))
+        self.setBlue(randrange(256))

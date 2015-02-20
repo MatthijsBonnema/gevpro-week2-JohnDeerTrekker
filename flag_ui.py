@@ -17,22 +17,29 @@ class Country(QtGui.QWidget):
 
     def initUI(self):
 
+        self.col = QtGui.QColor(0, 0, 0)
+
         grid = QtGui.QGridLayout()
         self.setLayout(grid)
 
         self.combobox = QtGui.QComboBox(self)
         self.combobox.addItems(country.Country.importlist(self))
         self.combobox.setCurrentIndex(0)
-#        self.combobox.currentIndexChanged.connect(self.update)
+        self.combobox.currentIndexChanged.connect(self.update_flag)
 
-        self.flag1 = QtGui.QFrame(self)
+#        self.flag = QtGui.QFrame(self)
 
-        grid.addWidget(self.flag1, 2, 0)
+#        grid.addWidget(self.flag, 2, 0)
         grid.addWidget(self.combobox, 1, 0)
 
         self.flag = QtGui.QFrame(self)
-        self.flag.setGeometry(10, 10, 10, 10)
+        self.flag.setGeometry(10, 10, 50, 50)
+        self.flag.setStyleSheet("QFrame { background-color: %s}" %
+            self.col.name())
 
+    def update_flag(self):
+        self.flag.setStyleSheet("QFrame { background-color: %s }" %
+            flag_color.FlagColor.random_color(self.col)) 
 def main():
     app = QtGui.QApplication(sys.argv)
     country = Country()
