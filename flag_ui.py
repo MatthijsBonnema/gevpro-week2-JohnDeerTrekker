@@ -13,17 +13,25 @@ class Country(QtGui.QWidget):
     def __init__(self):
         super(Country, self).__init__()
 
+        self.initUI()
+
+    def initUI(self):
+
         grid = QtGui.QGridLayout()
+        self.setLayout(grid)
 
         self.combobox = QtGui.QComboBox(self)
         self.combobox.addItems(country.Country.importlist(self))
+        self.combobox.setCurrentIndex(0)
+#        self.combobox.currentIndexChanged.connect(self.updateUI)
 
         self.flag1 = QtGui.QFrame(self)
 
         grid.addWidget(self.flag1, 2, 0)
         grid.addWidget(self.combobox, 1, 0)
 
-        self.setLayout(grid)
+        self.flag = QtGui.QFrame(self)
+        self.flag.setGeometry(10, 10, 10, 10)
 
 def main():
     app = QtGui.QApplication(sys.argv)
