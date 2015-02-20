@@ -27,9 +27,6 @@ class Country(QtGui.QWidget):
         self.combobox.setCurrentIndex(0)
         self.combobox.currentIndexChanged.connect(self.update_flag)
 
-#        self.flag = QtGui.QFrame(self)
-
-#        grid.addWidget(self.flag, 2, 0)
         grid.addWidget(self.combobox, 1, 0)
 
         self.flag = QtGui.QFrame(self)
@@ -39,7 +36,10 @@ class Country(QtGui.QWidget):
         grid.addWidget(self.flag, 3, 0)
 
     def update_flag(self):
-        self.flag.setStyleSheet("QFrame { background-color: %s }" % flag_color.FlagColor.random_color(self.col))
+        self.flag.setStyleSheet("QFrame {background-color: %s}" % flag_color.FlagColor())
+
+
+
 def main():
     app = QtGui.QApplication(sys.argv)
     country = Country()

@@ -22,16 +22,15 @@ class Country():
         return message
 
     def importlist(self):
-        countrylist = []
-        file = open("countries_list.txt")
-        for line in file:
-            separator = "\n"
-            line = line.split(separator)
-            for countries in line:
-                if countries != "":
-                    countrylist.append(countries)
-        file.close()
+        countrylist=[]
+        with open('countries_list.txt') as in_f:
+            for line in in_f:
+                x = line.split('\n')
+                countrylist.append(x[0])
         return countrylist
+
+
+
 
 if __name__ == "__main__":
     country = Country()
