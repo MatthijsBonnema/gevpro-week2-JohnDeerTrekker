@@ -33,13 +33,13 @@ class Country(QtGui.QWidget):
         grid.addWidget(self.combobox, 1, 0)
 
         self.flag = QtGui.QFrame(self)
-        self.flag.setGeometry(10, 10, 50, 50)
-        self.flag.setStyleSheet("QFrame { background-color: %s}" %
-            self.col.name())
+        self.flag.setFixedSize(250, 100)
+        self.flag.setStyleSheet("QFrame { background-color: %s}" % self.col.name())
+
+        grid.addWidget(self.flag, 3, 0)
 
     def update_flag(self):
-        self.flag.setStyleSheet("QFrame { background-color: %s }" %
-            flag_color.FlagColor.random_color(self.col)) 
+        self.flag.setStyleSheet("QFrame { background-color: %s }" % flag_color.FlagColor.random_color(self.col))
 def main():
     app = QtGui.QApplication(sys.argv)
     country = Country()
