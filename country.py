@@ -5,7 +5,7 @@
 # Info: 
 
 import sys
-
+from random import randrange
 
 class Country():
     def __init__(self):
@@ -15,16 +15,21 @@ class Country():
         self.country = country
 
     def __str__(self):
-        message = "Hello from {0}".format(self.country)
+        countries = self.importlist()
+        message = ("{}".format(countries))
         return message
 
+    def importlist(self):
+        countrylist = []
+        file = open("countries_list.txt")
+        for line in file:
+            separator = "\n"
+            line = line.split(separator)
+            for countries in line:
+                countrylist.append(countries)
+        file.close()
+        return countrylist
 
 if __name__ == "__main__":
-    country1 = Country()
-    country1.setcountry("Holland")
-
-    country2 = Country()
-    country2.setcountry("Germany")
-
-    print(country1)
-    print(country2)
+    country = Country()
+    print(country)
