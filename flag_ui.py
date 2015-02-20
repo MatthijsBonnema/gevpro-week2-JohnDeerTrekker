@@ -16,6 +16,7 @@ class Country(QtGui.QWidget):
         self.combobox = QtGui.QComboBox(self)
         self.combobox.addItems(country.Country.importlist(self))
         grid.addWidget(self.combobox, 1, 0)
+        self.setLayout(grid)
 
 def main():
     app = QtGui.QApplication(sys.argv)
