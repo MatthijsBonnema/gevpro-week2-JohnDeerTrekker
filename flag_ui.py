@@ -23,7 +23,7 @@ class Country(QtGui.QWidget):
         self.combobox = QtGui.QComboBox(self)
         self.combobox.addItems(country.Country.importlist(self))
         self.combobox.setCurrentIndex(0)
-#        self.combobox.currentIndexChanged.connect(self.updateUI)
+#        self.combobox.currentIndexChanged.connect(self.update)
 
         self.flag1 = QtGui.QFrame(self)
 
