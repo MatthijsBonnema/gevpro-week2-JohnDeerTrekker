@@ -26,7 +26,8 @@ class Country():
             separator = "\n"
             line = line.split(separator)
             for countries in line:
-                countrylist.append(countries)
+                if countries != "":
+                    countrylist.append(countries)
         file.close()
         return countrylist
 
