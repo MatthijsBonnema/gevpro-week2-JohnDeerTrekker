@@ -36,15 +36,15 @@ class Country(QtGui.QWidget):
         grid.addWidget(self.flag, 3, 0)
 
     def update_flag(self):
-        self.flag.setStyleSheet("QFrame {background-color: %s}" % flag_color.FlagColor())
-
+        self.col = flag_color.FlagColor.random_color(self.col)
+        self.flag.setStyleSheet("QFrame { background-color: %s}" % self.col.name())
 
 
 def main():
     app = QtGui.QApplication(sys.argv)
     country = Country()
     country.show()
-    country.setWindowTitle("Je Moeder")
+    country.setWindowTitle("Country Flags")
     app.exec_()
 
 if __name__ == "__main__":

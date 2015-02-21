@@ -10,9 +10,9 @@ class FlagColor(QtGui.QColor):
 
     def _init__(self):
         super(FlagColor, self).__init__()
-        self.random_color()
 
     def random_color(self):
-        self.setRed(randrange(256))
+        self.setRed(250)
         self.setGreen(randrange(256))
         self.setBlue(randrange(256))
+        return self
