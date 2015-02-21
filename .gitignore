@@ -56,3 +56,4 @@ target/
 #Extra
 *.swp
 *.un~
+.idea
