@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 # File: flag_ui.py
-# Author: Matthijs Bonnema
+# Author: Matthijs Bonnema and Jeroen Wilkens
 # Date: 2/13/15
-# Info: 
+# Info:
 
 from PyQt4 import QtGui
 import sys

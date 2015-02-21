@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-
-# flag_color.py
+# File: flag_color.py
+# Author: Matthijs Bonnema and Jeroen Wilkens
+# Date: 2/13/15
+# Info:
 
 import sys
 from random import randrange
