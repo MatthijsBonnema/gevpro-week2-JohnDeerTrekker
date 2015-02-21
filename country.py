@@ -22,7 +22,7 @@ class Country():
         return message
 
     def importlist(self):
-        countrylist=[]
+        countrylist=["--Select a Country--"]
         with open('countries_list.txt') as in_f:
             for line in in_f:
                 x = line.split('\n')
